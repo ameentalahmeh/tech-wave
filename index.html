@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Wave</title>
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <h1 class="company-name" onclick="window.location.reload()">TW</h1>
+
+        <div>
+            <a href="" onclick="scrollToSection('home', event)">Home</a>
+            <a href="" onclick="scrollToSection('about', event)">About Us</a>
+            <a href="" onclick="scrollToSection('products', event)">Products</a>
+            <a href="" onclick="scrollToSection('contact', event)">Contact Us</a>
+        </div>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </nav>
+
+    <div id="home" class="slider">
+        <div class="slider-heading">
+            <h3>TECH WAVE</h3>
+            <h5>Your Trusted Digital Solutions Provider</h5>
+            <button onclick="scrollToSection('products', event)" class="slider-button">Our Products</button>
+        </div>
+        <div class="slider-images">
+            <img src="assets/images/slider-image-1.png" class="slider-image" />
+            <img src="assets/images/slider-image-2.png" class="slider-image" />
+            <img src="assets/images/slider-image-3.png" class="slider-image" />
+        </div>
+    </div>
+
+    <div id="about" class="section">
+        <h2 class="section-title">About Tech Wave</h2>
+        <h3 class="section-subtitle">Driving Digital Transformation for a Better Tomorrow</h3>
+        <div class="mission-vision-content">
+            <div class="mission-vision-text">
+                <h3>Mission</h3>
+                <p>At Tech Wave, our mission is to deliver cutting-edge, scalable digital solutions that empower
+                    businesses and individuals to thrive in the modern era. Through our innovative technology, we aim to
+                    transform the way companies operate, helping them streamline processes, enhance efficiency, and stay
+                    ahead of the competition.</p>
+            </div>
+            <div class="vision-text">
+                <h3>Vision</h3>
+                <p>Our vision is to be at the forefront of the digital revolution, providing world-class software
+                    solutions that not only meet but exceed client expectations. We aspire to build a future where
+                    technology creates more opportunities for everyone, driving positive change across industries
+                    globally.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="products" class="section">
+        <h2 class="section-title">Our Products</h2>
+        <h3 class="section-subtitle">Innovative Solutions for the Digital Age</h3>
+        <div class="products">
+            <div class="product-card">
+                <i class="fa-solid fa-brain product-icon"></i>
+                <h4>AI Assistant</h4>
+                <p>Our AI-powered assistant helps businesses automate routine tasks, improving efficiency and reducing
+                    operational costs. Whether it's customer service, data analysis, or process automation, our AI tool
+                    adapts to your needs to drive results faster.</p>
+            </div>
+            <div class="product-card">
+                <i class="fa-solid fa-blog product-icon"></i>
+                <h4>Custom CRM System</h4>
+                <p>Tech Wave’s custom CRM is tailored to your business, providing powerful tools for managing customer
+                    interactions, sales pipelines, and performance analytics. Streamline your workflows, increase
+                    customer satisfaction, and boost your sales with our integrated solution.</p>
+            </div>
+            <div class="product-card">
+                <i class="fa-solid fa-users product-icon"></i>
+                <h4>Social Media Management Tool</h4>
+                <p>Our social media tool allows businesses to manage multiple platforms from a single dashboard,
+                    schedule posts, track engagement, and analyze performance. Whether you're a small business or a
+                    large enterprise, our tool helps you stay connected with your audience.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="section">
+        <div class="contact-container">
+            <div class="contact-details">
+                <h2 class="section-title" style="margin-top: 5px;">Contact Us</h2>
+                <h3 class="section-subtitle">Get in Touch with Tech Wave</h3>
+                <div class="contact-methods">
+                    <p><strong>Address:</strong><span class="address">123 Tech Wave Street, Innovation City, USA</span>
+                    </p>
+                    <p><strong>Phone:</strong><span class="contact-method phone">+1 (800) 123-4567</span></p>
+                    <p><strong>Email:</strong><span class="contact-method email">contact@techwave.com</span></p>
+                </div>
+            </div>
+            <form class="contact-form">
+                <select name="section">
+                    <option value="general">General Inquiry</option>
+                    <option value="sales">Sales</option>
+                    <option value="support">Support</option>
+                </select>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer id="footer" class="section">
+        <p class="copy-rights">©2023 <a href="" class="c-theme f-700">Tech Wave</a>. All rights reserved</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        const sliderImages = document.querySelector('.slider-images');
+        let slideIndex = 0;
+
+        function showSlide(index) {
+            if (index < 0) {
+                index = sliderImages.children.length - 1;
+            } else if (index >= sliderImages.children.length) {
+                index = 0;
+            }
+
+            sliderImages.style.transform = `translateX(-${index * 100}%)`;
+            slideIndex = index;
+        }
+
+        setInterval(() => {
+            showSlide(slideIndex + 1);
+        }, 5000);
+
+        showSlide(slideIndex);
+
+        // Generic scroll function
+        function scrollToSection(id, event) {
+            event.preventDefault();
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+
+</html>
