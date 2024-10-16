@@ -2,6 +2,9 @@
 
 Welcome to the **Tech Wave** landing page repository! This project showcases a modern and responsive landing page for Tech Wave, a digital solutions provider. The landing page is designed to highlight the company's mission, vision, products, and contact information.
 
+## Website
+### [Tech Wave](https://ameentalahmeh.github.io/tech-wave)
+
 ## Features
 
 - **Responsive Design**: The landing page is fully responsive and adapts seamlessly to various screen sizes.
